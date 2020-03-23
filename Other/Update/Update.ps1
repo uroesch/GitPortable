@@ -6,7 +6,7 @@
 # -----------------------------------------------------------------------------
 # Globals
 # -----------------------------------------------------------------------------
-$Version        = "0.0.11-alpha"
+$Version        = "0.0.12-alpha"
 $AppRoot        = "$PSScriptRoot\..\.."
 $AppDir         = "$AppRoot\App"
 $AppInfoDir     = "$AppDir\AppInfo"
@@ -129,18 +129,18 @@ Class Download {
 # Functions
 # -----------------------------------------------------------------------------
 Function Debug() {
-  param( 
+  param(
     [string] $Severity,
-    [string] $Message 
+    [string] $Message
   )
   $Color = 'White'
   $Severity = $Severity.ToUpper()
   Switch ($Severity) {
-    'INFO'  { $Color = 'Green';  break } 
-    'WARN'  { $Color = 'Yellow'; break } 
-    'ERROR' { $Color = 'Orange'; break } 
-    'FATAL' { $Color = 'Red';    break } 
-    default { $Color = 'White';  break } 
+    'INFO'  { $Color = 'Green';  break }
+    'WARN'  { $Color = 'Yellow'; break }
+    'ERROR' { $Color = 'Orange'; break }
+    'FATAL' { $Color = 'Red';    break }
+    default { $Color = 'White';  break }
   }
   If (-Not($Debug)) { return }
   Write-Host "$(Get-Date -Format u) - " -NoNewline
@@ -183,7 +183,7 @@ Function Which-7Zip() {
   }
   Finally {
     If (!($Path)) {
-      Debug fatal "Could not locate $Binary" 
+      Debug fatal "Could not locate $Binary"
       Exit 76
     }
   }
@@ -206,7 +206,7 @@ Function Download-File {
   param(
     [object] $Download
   )
-  If (!(Test-Path $Download.DownloadDir)) { 
+  If (!(Test-Path $Download.DownloadDir)) {
     Debug info "Create directory $($Download.DownloadDir)"
     New-Item -Path $Download.DownloadDir -Type directory | Out-Null
   }
@@ -344,7 +344,7 @@ Function Postinstall() {
 # -----------------------------------------------------------------------------
 Function Windows-Path() {
   param( [string] $Path )
-  $Path = $Path -replace ".*drive_(.*)", '$1' 
+  $Path = $Path -replace ".*drive_(.)", '$1:'
   $Path = $Path.Replace("/", "\")
   return $Path
 }
