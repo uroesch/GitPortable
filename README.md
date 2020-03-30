@@ -18,6 +18,18 @@ just like the "git" command in LINUX and UNIX environments.
 ## Runtime dependencies
 * 32-bit or 64-bit version of Windows Vista or greater.
 
+## Support matrix
+
+| OS              | 32-bit                  | 64-bit         | 
+|-----------------|:------------------:|:-------------------:|
+| Windows XP      | :no_entry_sign:    | :no_entry_sign:     | 
+| Windows Vista   | :white_check_mark: | :white_check_mark:  | 
+| Windows 7       | :white_check_mark: | :white_check_mark:  |  
+| Windows 8       | :white_check_mark: | :white_check_mark:  | 
+| Windows 10      | :heavy_check_mark: | :heavy_check_mark:  |
+
+Legend: :no_entry_sign: not supported; :white_check_mark: supposed to work but not verified; :heavy_check_mark: verified;
+
 ## Status 
 This PortableApps project is in beta stage. 
 
