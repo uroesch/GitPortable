@@ -1,6 +1,7 @@
 [![Build](https://github.com/uroesch/GitPortable/workflows/build-package/badge.svg)](https://github.com/uroesch/GitPortable/actions?query=workflow%3Abuild-package)
 [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/uroesch/GitPortable?include_prereleases)](https://github.com/uroesch/GitPortable/releases)
 [![Runs on](https://img.shields.io/badge/runs%20on-Win64%20%26%20Win32-blue)](#runtime-dependencies)
+![GitHub All Releases](https://img.shields.io/github/downloads/uroesch/GitPortable/total?style=flat)
 
 # Git Portable for PortableApps.com
 
