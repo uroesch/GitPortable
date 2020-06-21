@@ -3,7 +3,7 @@
 $_PostInstall = "$AppDir\Git\post-install.bat" 
 
 If (Test-Path $_PostInstall) {
-  Switch (Is-Unix) {
+  Switch (Test-Unix) {
     $True   { $_Prefix = 'wine'; break }
     default { $_Prefix = '';     break }
   }
