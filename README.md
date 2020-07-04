@@ -24,12 +24,15 @@ just like the "git" command in LINUX and UNIX environments.
 | OS              | 32-bit             | 64-bit              | 
 |-----------------|:------------------:|:-------------------:|
 | Windows XP      | ![ns][ns]          | ![ns][ns]           | 
-| Windows Vista   | ![ps][ps]          | ![ps][ps]           | 
-| Windows 7       | ![ps][ps]          | ![ps][ps]           |  
+| Windows Vista   | ![ns][ns]          | ![ns][ns]           | 
+| Windows 7       | ![ns][ns]          | ![ns][ns]           |  
 | Windows 8       | ![ps][ps]          | ![ps][ps]           |  
 | Windows 10      | ![fs][fs]          | ![fs][fs]           |
 
 Legend: ![ns][ns] not supported;  ![nd][nd] no data; ![ps][ps] supported but not verified; ![fs][fs] verified;`
+
+**Note:** With version `2.27` the `mintty` terminal is stackdumping on Windows 7 and possibly Vista. 
+  The last version supported and tested on Windows 7 is `2.26.2`.
 
 ## Status 
 This PortableApps project is in beta stage. 
