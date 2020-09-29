@@ -12,7 +12,8 @@ Using module ".\PortableAppsCommon.psm1"
 # -----------------------------------------------------------------------------
 # Globals
 # -----------------------------------------------------------------------------
-$Version = "0.0.24-alpha"
+Set-PSDebug -Trace 1
+$Version = "0.0.25-alpha"
 $Debug   = $True
 
 # -----------------------------------------------------------------------------
@@ -269,11 +270,6 @@ Function Invoke-Helper() {
       $Arguments = ConvertTo-WindowsPath $AppPath
     }
   }
-
-  #If ($Sleep) {
-  #  Debug info "Waiting for filsystem cache to catch up"
-  #  Start-Sleep $Sleep
-  #}
 
   Debug info "Run PA $Command $Arguments"
   Start-Process $Command -ArgumentList $Arguments -NoNewWindow -Wait
