@@ -32,7 +32,7 @@ Param(
 # -----------------------------------------------------------------------------
 # Globals
 # -----------------------------------------------------------------------------
-$Version = "0.0.25-alpha"
+$Version = "0.0.27-alpha"
 $Debug   = $True
 
 # -----------------------------------------------------------------------------
@@ -40,9 +40,11 @@ $Debug   = $True
 # -----------------------------------------------------------------------------
 Function Which-7Zip() {
   $Locations = @(
+    @($env:PATH.Split([IO.Path]::PathSeparator)),
     "$Env:ProgramFiles\7-Zip",
     "$Env:ProgramFiles(x86)\7-Zip",
-    "$AppRoot\..\7-ZipPortable\App\7-Zip"
+    "$AppRoot\..\7-ZipPortable\App\7-Zip",
+    "$AppRoot\..\PortableApps.comInstaller\App\7zip"
   )
   Switch (Test-Unix) {
     $True {
@@ -55,21 +57,16 @@ Function Which-7Zip() {
       $Binary = '7z.exe'
     }
   }
-  Try {
-    $Path = $(Get-Command $Binary).Source.ToString()
-  }
-  Catch {
-    Foreach ($Location in $Locations) {
-      If (Test-Path "$Location\$Binary") {
-        $Path = "$Prefix $Location\$Binary"
-      }
+  Foreach ($Location in $Locations) {
+    $Location
+    # There is get command but this way it works with relative pathes
+    If (Test-Path "$Location\$Binary") {
+      $Path = "$Prefix $Location\$Binary"
     }
   }
-  Finally {
-    If (!($Path)) {
-      Debug fatal "Could not locate $Binary"
-      Exit 76
-    }
+  If (!($Path)) {
+    Debug fatal "Could not locate $Binary"
+    Exit 76
   }
   return $Path
 }
