@@ -58,7 +58,6 @@ Function Which-7Zip() {
     }
   }
   Foreach ($Location in $Locations) {
-    $Location
     # There is get command but this way it works with relative pathes
     If (Test-Path "$Location\$Binary") {
       $Path = "$Prefix $Location\$Binary"
