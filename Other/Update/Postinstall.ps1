@@ -1,6 +1,6 @@
 # Run the post-install script
 
-$_PostInstall = "$AppDir\Git\post-install.bat"
+$_PostInstall = "$AppDir\Git\post-install.bat" 
 
 If (Test-Path $_PostInstall) {
   Switch (Test-Unix) {
