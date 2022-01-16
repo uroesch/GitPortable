@@ -28,7 +28,7 @@ just like the "git" command in LINUX and UNIX environments.
 | Windows 7       | ![ns][ns]          | ![ns][ns]           |  
 | Windows 8       | ![ps][ps]          | ![ps][ps]           |  
 | Windows 10      | ![fs][fs]          | ![fs][fs]           |
-| Windows 11      | ![na][na]          | ![ps][ps]           |
+| Windows 11      | ![na][na]          | ![fs][fs]           |
 
 Legend: ![ns][ns] not supported; ![na][na] not applicable; ![nd][nd] no data; ![ps][ps] supported but not verified; ![fs][fs] verified;
 
