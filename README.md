@@ -49,7 +49,7 @@ more user friendly notation `...\PortableApps\GitPortable\Data\home`.
 
 All the private SSH keys should be stored under the home's `.ssh` directory.
 
-### Git bash
+### Git Bash
 
 #### OpenSSH
 
@@ -159,18 +159,14 @@ Receiving objects: 100% (856/856), 419.32 KiB | 657.00 KiB/s, done.
 Resolving deltas: 100% (386/386), done.
 ```
 
-### Git CMD
-
-**Note**: There is currently a bug (#114) which prevents creating keys within
- the windows terminal version. In detail the directory holding the ssh binaries
- `C:\Windows\System32\OpenSSH` is not accessible from within the `git-cmd` terminal.
-  The problem seems to be upstream not with this package.
+### Git Cmd
 
 #### OpenSSH
 
-When using the Git CMD terminal use a plain vanilla Windows CMD or PowerShell
-terminal to create the key or follow the instructions using the outlined in
-the `git-bash` section.
+##### Generating a private key and public ssh key
+
+To create a ssh private and public key follo the instructions under
+the **Git Bash** section they are identical under `git-cmd`.
 
 ##### Passwordless git over SSH
 
