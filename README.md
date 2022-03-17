@@ -39,7 +39,7 @@ Legend: ![ns][ns] not supported; ![na][na] not applicable; ![nd][nd] no data; ![
   The last version supported and tested on Windows 7 is `2.26.2`.
 
 ## Status
-This PortableApps project is in beta stage.
+This PortableApps project is in production stage.
 
 ## SSH key setup
 
