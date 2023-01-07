@@ -291,7 +291,7 @@ Receiving objects:  94% (840/893), 348.01 KiB | 548.00 KiB/sremote: Total 893 (d
 Resolving deltas: 100% (408/408), done.
 ----
 
-// Start include INSTALL.md
+// Start include INSTALL.adoc
 
 == Installation
 
@@ -337,9 +337,9 @@ image:howto_unblock-file.png[width="600"]
 . Choose `Properties` at the bottom of the menu.
 . Check the unblock box.
 
-// End include INSTALL.md
+// End include INSTALL.adoc
 
-// Start include BUILD.md
+// Start include BUILD.adoc
 
 === Build
 
@@ -474,6 +474,6 @@ cd {app-name}
 pwsh Other/Update/Update.ps1
 ----
 
-// End include BUILD.md
+// End include BUILD.adoc
 
 // vim: set colorcolumn=80 textwidth=80 : #spell spelllang=en_us :
