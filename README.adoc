@@ -70,6 +70,10 @@ behaves just like the "git" command in LINUX and UNIX environments.
 
 * 32-bit or 64-bit version of Windows Vista or greater.
 
+== Companion apps
+* Since version 2.39.2 {git-base-url}/GitlabCliPortable[GitlabCliPortable] is 
+  accessible from within the bash and CMD shells if installed.
+
 == Support matrix
 
 [cols=",^,^", options=header]
